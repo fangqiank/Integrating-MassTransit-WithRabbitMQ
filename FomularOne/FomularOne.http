@@ -1,0 +1,6 @@
+@FomularOne_HostAddress = http://localhost:5231
+
+GET {{FomularOne_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
