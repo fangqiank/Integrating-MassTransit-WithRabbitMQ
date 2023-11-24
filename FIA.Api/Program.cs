@@ -1,3 +1,4 @@
+using FomularOne.Contracts;
 using MassTransit;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,8 +17,8 @@ builder.Services.AddMassTransit(cfg =>
 
     var assembly = typeof(Program).Assembly;
 
-    cfg.AddConsumer(assembly);
-    cfg.AddSagaStateMachine(assembly);
+    cfg.AddConsumers(assembly);
+    cfg.AddSagaStateMachines(assembly);
     cfg.AddSagas(assembly);
     cfg.AddActivities(assembly);
 
